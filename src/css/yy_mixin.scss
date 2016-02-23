@@ -1,0 +1,23 @@
+///////////////
+//  mixin defined
+//  @author yy
+//  2015.11.25
+//////////////
+@mixin borderRadius($num) {
+    -webkit-border-radius: $num;
+       -moz-border-radius: $num;
+            border-radius: $num;
+}
+@mixin boxShadow($x,$y,$spread,$color) {
+    -webkit-box-shadow: $x $y $spread $color;
+            box-shadow: $x $y $spread $color;
+}
+@mixin mtl($t, $l){
+    margin-top: $t;
+    margin-left: $l;
+}
+@mixin animation($name){
+    -webkit-animation: $name;
+    -moz-animation: $name;
+    animation: $name;
+}

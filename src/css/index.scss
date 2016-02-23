@@ -1,0 +1,179 @@
+@import 'yy_mixin';
+@import 'variable';
+
+.logo{
+    position: absolute;
+    top: 50%;
+    margin-top: -53px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 106px;
+}
+.index-pic{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    border: 20px solid $red;
+    @include borderRadius(50%);
+    cursor: pointer;
+}
+.index-pic img{ width: 100%; }
+
+.index-pic.index-yy{
+    @include mtl(-330px,-330px);
+    border-color: #efff39;
+}
+.index-pic.index-yhy{
+    @include mtl(-280px,150px);
+    border-color: #40ff2c;
+}
+.index-pic.index-blog{
+    @include mtl(80px,-450px);
+    border-color: #0079cd;
+}
+.index-pic.index-photo{
+    @include mtl(30px,250px);
+    border-color: #ff2e2e;
+}
+@keyframes ball1{
+    from{
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -200px;
+        transform: scale(.1,.1) rotate(500deg);
+    }
+    25%{
+        top: 50%;
+        left: 50%;
+        margin-top: 80px;
+        margin-left: -450px;
+        transform: scale(1,1) rotate(500deg);
+    }
+    50%{
+        top: 50%;
+        left: 50%;
+        margin-top: 30px;
+        margin-left: 250px;
+        transform: scale(1,1) rotate(500deg);
+    }
+    75%{
+        top: 50%;
+        left: 50%;
+        margin-top: -280px;
+        margin-left: 150px;
+        transform: scale(1,1) rotate(500deg);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+        margin-top: -330px;
+        margin-left: -330px;
+        transform: scale(1,1) rotate(0);
+    }
+}
+@keyframes ball2{
+    from{
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -200px;
+        transform: scale(.1,.1) rotate(500deg);
+    }
+    25%{
+        top: 50%;
+        left: 50%;
+        margin-top: 80px;
+        margin-left: -450px;
+        transform: scale(1,1) rotate(500deg);
+    }
+    50%{
+        top: 50%;
+        left: 50%;
+        margin-top: 30px;
+        margin-left: 250px;
+        transform: scale(1,1) rotate(500deg);
+    }
+    75%{
+        top: 50%;
+        left: 50%;
+        margin-top: -280px;
+        margin-left: 150px;
+        transform: scale(1,1) rotate(0);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+        margin-top: -280px;
+        margin-left: 150px;
+        transform: scale(1,1) rotate(0);
+    }
+}
+@keyframes ball3{
+    from{
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -200px;
+        transform: scale(.1,.1) rotate(500deg);
+    }
+    25%{
+        top: 50%;
+        left: 50%;
+        margin-top: 80px;
+        margin-left: -450px;
+        transform: scale(1,1) rotate(500deg);
+    }
+    50%{
+        top: 50%;
+        left: 50%;
+        margin-top: 30px;
+        margin-left: 250px;
+        transform: scale(1,1) rotate(0);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+        margin-top: 30px;
+        margin-left: 250px;
+        transform: scale(1,1) rotate(0);
+    }
+}
+@keyframes ball4{
+    from{
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -200px;
+        transform: scale(.1,.1) rotate(500deg);
+    }
+    25%{
+        top: 50%;
+        left: 50%;
+        margin-top: 80px;
+        margin-left: -450px;
+        transform: scale(1,1) rotate(0deg);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+        margin-top: 80px;
+        margin-left: -450px;
+        transform: scale(1,1) rotate(0);
+    }
+}
+.index-pic.index-yy{
+    @include animation(ball1 2s linear);
+}
+.index-pic.index-yhy{
+    @include animation(ball2 2s linear);
+}
+.index-pic.index-photo{
+    @include animation(ball3 2s linear);
+}
+.index-pic.index-blog{
+    @include animation(ball4 2s linear);
+}

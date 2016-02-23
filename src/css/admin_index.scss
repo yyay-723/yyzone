@@ -1,0 +1,64 @@
+//Variable defined
+@import "yy_mixin";
+@import "variable";  
+
+@-webkit-keyframes logindiv{
+    from{ @include boxShadow(0, 0, 0, $white); }
+    30%{ @include boxShadow(0, 0, 40px, $white); }
+    50%{ @include boxShadow(0, 0, 3px, $white); }
+    80%{ @include boxShadow(0, 0, 20px, $white); }
+    100%{ @include boxShadow(0, 0, 0px, $white); }
+}  
+@keyframes logindiv{
+     from{ @include boxShadow(0, 0, 0, $white); }
+    30%{ @include boxShadow(0, 0, 40px, $white); }
+    50%{ @include boxShadow(0, 0, 3px, $white); }
+    80%{ @include boxShadow(0, 0, 20px, $white); }
+    100%{ @include boxShadow(0, 0, 0px, $white); }
+}  
+.m-admin-login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include mtl(-130px,-200px);  
+    width: 400px;
+    height: 260px;
+    padding: 20px;
+    border: 3px solid #fff;
+    @include borderRadius(8px);
+    @include boxShadow(0, 0, 20px, $white);
+    @include animation(logindiv 5s linear infinite);
+}
+.m-admin-login h3{
+    font-size: 24px;
+    color: $lightGery;
+    text-align: center;
+}
+.u-input{
+    display: block;
+    width: 300px;
+    height: 34px;
+    padding: 0 5px;
+    margin: 30px auto;
+    color: $white;
+    line-height: 34px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid $lightGery;
+    @include borderRadius(8px);
+}
+.u-admin-index-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    @include mtl(-210px, -400px);
+    -webkit-transform: rotate(-25deg);
+       -moz-transform: rotate(-25deg);
+        -ms-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+}
+.u-input.u-btn{
+    text-align: center;
+    cursor: pointer;
+}

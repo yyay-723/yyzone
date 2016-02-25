@@ -21,3 +21,12 @@
     -moz-animation: $name;
     animation: $name;
 }
+@mixin borderRadiusB($left, $right){
+    border-bottom-left-radius: $left;
+    border-bottom-right-radius: $right;
+}
+@mixin blockCenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

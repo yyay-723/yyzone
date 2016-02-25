@@ -24,19 +24,19 @@
 
 .index-pic.index-yy{
     @include mtl(-330px,-330px);
-    border-color: #efff39;
+    border-color: $yellow;
 }
 .index-pic.index-yhy{
     @include mtl(-280px,150px);
-    border-color: #40ff2c;
+    border-color: $green;
 }
 .index-pic.index-blog{
     @include mtl(80px,-450px);
-    border-color: #0079cd;
+    border-color: $blue;
 }
 .index-pic.index-photo{
     @include mtl(30px,250px);
-    border-color: #ff2e2e;
+    border-color: $red;
 }
 @keyframes ball1{
     from{

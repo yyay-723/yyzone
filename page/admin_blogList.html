@@ -7,17 +7,45 @@
 		<script src="../src/js/jquery-1.8.3.min.js"></script>
 	</head>
 	<body>
-		<div class="m-admin-head">
+		<nav class="g-admin-head clearfix">
 			<ul>
 				<li class="first"><span>YY</span></li>
 				<li class="second"><span></span>HY</li>
 				<li class="third z-active"><span>Blog</span></li>
 				<li class="forth"><span>Photo</span></li>
 			</ul>
-			<div class="u-admin-search">
-				<input type="text" />
-				<i class="u-search-btn"></i>
+			<div class="u-search clearfix">
+				<input class="u-input-nbor" placeholder="我是搜索" type="text" />
+				<div class="u-icon-search f-fr">
+					<i class="u-search-btn"></i>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="g-admin-body clearfix">
+			<aside class="m-admin-nav">
+				<ul>
+					<li class="first"><a href="">All blogs</a></li>
+					<li class="second"><a href="">Public blogs</a></li>
+					<li class="third"><a href="">Secret blogs</a></li>
+					<li class="forth"><a href="">Drafts</a></li>
+				</ul>
+			</aside>
+			
+			<div class="m-admin-main">
+				<p class="m-blog-new"><i class="u-icon-add">+</i>写博客</p>
+				<ul class="m-blog-list">
+					<li><a href="">smarty模板的注意事项</a><a class="u-blog-edit" href="">删除</a><a class="u-blog-edit" href="">编辑</a></li>
+					<li><a href="">thinkPHP框架搭建</a><a class="u-blog-edit" href="">删除</a><a class="u-blog-edit" href="">编辑</a></li>
+					<li><a href="">sass的初级使用——安装ruby环境</a><a class="u-blog-edit" href="">删除</a><a class="u-blog-edit" href="">编辑</a></li>
+					<li><a href="">规范HTML标签类名</a><a class="u-blog-edit" href="">删除</a><a class="u-blog-edit" href="">编辑</a></li>
+					<li><a href="">怎样提高代码的易读性和维护性</a><a class="u-blog-edit" href="">删除</a><a class="u-blog-edit" href="">编辑</a></li>
+					<li><a href="">velocity模版的应用场景</a><a class="u-blog-edit" href="">删除</a><a class="u-blog-edit" href="">编辑</a></li>
+					<li><a href="">CSS3最常用的特性及其浏览器兼容性总结</a><a class="u-blog-edit" href="">删除</a><a class="u-blog-edit" href="">编辑</a></li>
+					<li><a href="">IE常见bug</a><a class="u-blog-edit" href="">删除</a><a class="u-blog-edit" href="">编辑</a></li>
+				</ul>
 			</div>
 		</div>
+		
 	</body>
 </html>

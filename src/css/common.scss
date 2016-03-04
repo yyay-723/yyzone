@@ -1,6 +1,8 @@
+///////////////< reset >///////////////////
 body{ 
     font: 14px/150% '\5FAE\8F6F\96C5\9ED1', Verdana, Arial, Helvetica, sans-serif;
     background:url(../../build/img/project/bg.png) repeat;
+    color: $white;
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,a,span,i,b{ margin:0; padding:0;}
 table{ border-collapse:collapse; border-spacing:0;}
@@ -10,6 +12,7 @@ li{ list-style:none;}
 caption,th{ text-align:left;}
 h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
 i{ font-style:normal;}
+i,em{ display: inline-block; }
 a{ 
     display: inline-block;
     width: auto;
@@ -20,6 +23,7 @@ a:hover{
     color: inherit;
     text-decoration: none;
 }
+input:focus{ outline: none; }
 .clearfix{ zoom: 1; }
 .clearfix:after{
     content:'.';
@@ -29,15 +33,25 @@ a:hover{
     clear: both;
     font-size: 0;
 }
+
+////////////////////< function >///////////////////////////
 .f-ov-h{ overflow: hidden!important; }
 .f-ta-c{ text-align: center!important; }
-//////////////////////////////////////////////////
-.m-admin-head{
-    width: 1100px;
+.f-fr{ float: right; }
+.f-fl{ float: left; }
+.f-mt10{ margin-top: 10px!important; }
+.f-ml10{ margin-left: 10px!important; }
+.f-mr10{ margin-right: 10px!important; }
+.f-mb10{ margin-bottom: 10px!important; }
+
+/////////////////////< layout >/////////////////////////////
+.g-admin-head{
+    width: 1200px;
     height: 80px;
     @include blockCenter;
 }
-.m-admin-head ul li{
+.g-admin-head ul{ float: left; }
+.g-admin-head ul li{
     display: inline-block;
     width: 150px;
     height: 50px;
@@ -52,11 +66,103 @@ a:hover{
     transition: all .5s;
     @include borderRadiusB(6px,6px);
 }
-.m-admin-head ul li.second{ background-color: $green; }
-.m-admin-head ul li.third{ background-color: $blue; }
-.m-admin-head ul li.forth{ background-color: $red; }
-.m-admin-head ul li.z-active,
-.m-admin-head ul li:hover{ 
+.g-admin-head ul li.second{ background-color: $green; }
+.g-admin-head ul li.third{ background-color: $blue; }
+.g-admin-head ul li.forth{ background-color: $red; }
+.g-admin-head ul li.z-active,
+.g-admin-head ul li:hover{ 
     height: 80px; 
     line-height: 120px;
+}
+.g-admin-body{
+    width: 1200px;
+    margin-top: 50px;
+    @include blockCenter;
+}
+
+///////////////////< module >//////////////////////////
+aside.m-admin-nav{
+    float: left;
+    width: 300px;
+    margin-top: 20px;
+}
+aside.m-admin-nav ul li{
+    width: 280px;
+    height: 45px;
+    line-height: 45px;
+    color: $middleGrey;
+    text-align: center;
+    @include borderRadiusR(8px,8px);
+    cursor: pointer;
+    transition: all .5s;
+}
+aside.m-admin-nav ul li:hover{ width: 300px; }
+aside.m-admin-nav ul li.first{ background-color: $lightRed; }
+aside.m-admin-nav ul li.second{ background-color: $lightBlue; }
+aside.m-admin-nav ul li.third{ background-color: $lightGreen; }
+aside.m-admin-nav ul li.forth{ background-color: $lightYellow; }
+.m-admin-main{
+    float: left;
+    width: 870px;
+    @include mtl(10px,30px);
+}
+.m-admin-main p.m-blog-new{ 
+    padding: 10px 0; 
+    font-size: 16px;
+    cursor: pointer;
+}
+.m-blog-list li{
+    @include mtl(15px,25px);
+    font-size: 15px;
+    list-style: circle;
+    cursor: pointer;
+}
+/////////////////< unit >////////////////////
+.u-search{
+    float: right;
+    width: 300px;
+    height: 30px;
+    margin-top: 25px;
+    border: 2px solid $white;
+    @include borderRadius(6px);
+}
+.u-search input.u-input-nbor{
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+    color: $white;
+    background-color: transparent;
+    border: none;
+}
+.u-icon-search .u-search-btn{
+    display: inline-block;
+    width: 21px;
+    height: 20px;
+    @include mtl(5px,5px);
+    background: url(../../build/img/project/icon-search.png);
+}
+.u-blog-edit{
+    float: right;
+    margin-right: 10px;
+}
+.u-blog-edit:hover{ text-decoration: underline; }
+/////////////////< icon >//////////////////
+.u-icon-search{
+    width: 30px;
+    height: 30px;
+    background-color: $blue;
+    cursor: pointer;
+    @include borderRadius(4px);
+}
+.u-icon-add{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: $white;
+    text-align: center;
+    line-height: 20px;
+    vertical-align: bottom;
+    border: 1px solid $white;
+    @include borderRadius(50%);
 }

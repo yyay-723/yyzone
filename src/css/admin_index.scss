@@ -31,7 +31,7 @@
 }
 .m-admin-login h3{
     font-size: 24px;
-    color: $lightGery;
+    color: $lightGrey;
     text-align: center;
 }
 .u-input{
@@ -44,7 +44,7 @@
     line-height: 34px;
     background-color: transparent;
     outline: none;
-    border: 2px solid $lightGery;
+    border: 2px solid $lightGrey;
     @include borderRadius(8px);
 }
 .u-admin-index-logo{

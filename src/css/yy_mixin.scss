@@ -25,6 +25,10 @@
     border-bottom-left-radius: $left;
     border-bottom-right-radius: $right;
 }
+@mixin borderRadiusR($top, $bottom){
+    border-top-right-radius: $top;
+    border-bottom-right-radius: $bottom;
+}
 @mixin blockCenter{
     display: block;
     margin-left: auto;

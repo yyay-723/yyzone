@@ -87,7 +87,7 @@ aside.m-admin-nav{
     margin-top: 20px;
 }
 aside.m-admin-nav ul li{
-    width: 280px;
+    width: 250px;
     height: 45px;
     line-height: 45px;
     color: $middleGrey;
@@ -96,7 +96,8 @@ aside.m-admin-nav ul li{
     cursor: pointer;
     transition: all .5s;
 }
-aside.m-admin-nav ul li:hover{ width: 300px; }
+aside.m-admin-nav ul li:hover,
+aside.m-admin-nav ul li.z-active{ width: 280px; }
 aside.m-admin-nav ul li.first{ background-color: $lightRed; }
 aside.m-admin-nav ul li.second{ background-color: $lightBlue; }
 aside.m-admin-nav ul li.third{ background-color: $lightGreen; }
@@ -165,4 +166,12 @@ aside.m-admin-nav ul li.forth{ background-color: $lightYellow; }
     vertical-align: bottom;
     border: 1px solid $white;
     @include borderRadius(50%);
+}
+.u-icon-lock{
+    width: 11px;
+    height: 15px;
+    margin-top: -3px;
+    margin-left: 5px;
+    background: url(../../build/img/project/icon-lock.png);
+    vertical-align: middle;
 }

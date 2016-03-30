@@ -167,7 +167,7 @@ aside.m-admin-nav {
 }
 
 aside.m-admin-nav ul li {
-  width: 280px;
+  width: 250px;
   height: 45px;
   line-height: 45px;
   color: #666;
@@ -178,8 +178,9 @@ aside.m-admin-nav ul li {
   transition: all .5s;
 }
 
-aside.m-admin-nav ul li:hover {
-  width: 300px;
+aside.m-admin-nav ul li:hover,
+aside.m-admin-nav ul li.z-active {
+  width: 280px;
 }
 
 aside.m-admin-nav ul li.first {
@@ -280,6 +281,15 @@ aside.m-admin-nav ul li.forth {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+
+.u-icon-lock {
+  width: 11px;
+  height: 15px;
+  margin-top: -3px;
+  margin-left: 5px;
+  background: url(../../build/img/project/icon-lock.png);
+  vertical-align: middle;
 }
 
 .logo {

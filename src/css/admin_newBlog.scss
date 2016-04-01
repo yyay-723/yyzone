@@ -1,0 +1,129 @@
+.m-new-blog{ padding-bottom: 80px; }
+.m-new-blog>li{ margin-top: 10px; }
+.m-new-blog li>span{
+    display: inline-block;
+    width: 120px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+    vertical-align: top;
+    text-align: right;
+}
+.m-new-blog li input{
+    display: inline-block;
+    width: 700px;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    @include borderRadius(4px);
+}
+.m-new-blog li .u-ueditor{
+    display: inline-block;
+    width: 700px;
+    height: 500px;
+}
+.u-select{ display: inline-block; }
+.u-select .u-select-input{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #fff;
+    @include borderRadius(4px);
+    cursor: pointer;
+}
+.u-select .u-select-input input{
+    display: inline-block;
+    width: 160px;
+    height: 20px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.u-select .u-select-input em{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.u-select-drop{
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #fff;
+}
+.u-select-drop ul li{
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px dotted #fff;
+}
+.m-label-cont{ 
+    display: inline-block; 
+    width: 700px;
+    cursor: text;
+}
+.m-label-cont .m-label-input{ 
+    border: 2px solid #fff; 
+    @include borderRadius(4px);
+}
+.m-label-cont .m-label-input input{
+    width: 200px;
+    border: none;
+}
+.m-label-useful dt{
+    padding: 10px 0;
+    font-size: 16px;
+}
+.m-label-useful dd a{
+    display: inline-block;
+    padding: 2px 6px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    color: $darkGrey;
+    background-color: $lightGrey;
+    @include borderRadius(8px);
+}
+.m-authority{ display: inline-block; }
+.m-authority ul li{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    padding: 5px 0 5px 5px;
+    margin-top: 0px;
+    margin-right: 15px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.m-authority ul li span{
+    width: 150px;
+    margin-right: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+    text-align: center;
+}
+.m-authority ul li em{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-top: -5px;
+    float: right;
+    border-left: 1px solid #fff;
+}
+.m-authority ul li:hover em,
+.m-authority ul li.z-active em{
+    background: url(../../build/img/project/icon-check.png) center center no-repeat;
+    background-size: 60% 60%;
+}

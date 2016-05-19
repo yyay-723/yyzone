@@ -118,6 +118,16 @@ aside.m-admin-nav ul li.forth{ background-color: $lightYellow; }
     list-style: circle;
     cursor: pointer;
 }
+.m-pop-mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: $lightBlue;
+    opacity: 0.6;
+}
 /////////////////< unit >////////////////////
 .u-search{
     float: right;
@@ -147,6 +157,15 @@ aside.m-admin-nav ul li.forth{ background-color: $lightYellow; }
     margin-right: 10px;
 }
 .u-blog-edit:hover{ text-decoration: underline; }
+
+.u-btn{
+    display: inline-block;
+    padding: 5px 10px;
+    @include borderRadius(6px);
+    cursor: pointer;
+}
+.u-btn.bg-blue{ background-color: $blue; }
+.u-btn.bg-blue:hover{ background-color: $blueHover;}
 /////////////////< icon >//////////////////
 .u-icon-search{
     width: 30px;

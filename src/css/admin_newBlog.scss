@@ -1,5 +1,5 @@
 .m-new-blog{ padding-bottom: 80px; }
-.m-new-blog>li{ margin-top: 10px; }
+.m-new-blog>li{ margin-top: 20px; }
 .m-new-blog li>span{
     display: inline-block;
     width: 120px;
@@ -17,9 +17,9 @@
     line-height: 30px;
     padding: 5px 10px;
     font-size: 14px;
-    color: #fff;
+    color: $white;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid $white;
     @include borderRadius(4px);
 }
 .m-new-blog li .u-ueditor{
@@ -27,20 +27,23 @@
     width: 700px;
     height: 500px;
 }
-.u-select{ display: inline-block; }
+.u-select{ 
+    position: relative;
+    display: inline-block; 
+}
 .u-select .u-select-input{
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 160px;
     height: 30px;
     padding: 5px;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     @include borderRadius(4px);
     cursor: pointer;
 }
 .u-select .u-select-input input{
     display: inline-block;
-    width: 160px;
+    width: 130px;
     height: 20px;
     padding: 5px;
     border: none;
@@ -53,28 +56,36 @@
     display: inline-block;
     width: 0;
     height: 0;
-    border-top: 10px solid #fff;
+    border-top: 10px solid $white;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
 .u-select-drop{
-    width: 200px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+    width: 160px;
     padding: 5px;
-    border: 1px solid #fff;
+    color: $darkGrey;
+    background-color: $lightRed;
+    border: 1px solid $white;
+    cursor: pointer;
 }
 .u-select-drop ul li{
     padding: 5px;
     text-align: center;
-    border-bottom: 1px dotted #fff;
+    border-bottom: 1px dotted $darkGrey;
 }
+.u-select-drop ul li:hover{ background-color: $red; }
 .m-label-cont{ 
     display: inline-block; 
     width: 700px;
-    cursor: text;
 }
 .m-label-cont .m-label-input{ 
-    border: 2px solid #fff; 
+    border: 2px solid $white; 
+    cursor: text;
     @include borderRadius(4px);
 }
 .m-label-cont .m-label-input input{
@@ -92,6 +103,7 @@
     margin-bottom: 10px;
     color: $darkGrey;
     background-color: $lightGrey;
+    cursor: pointer;
     @include borderRadius(8px);
 }
 .m-authority{ display: inline-block; }
@@ -102,7 +114,7 @@
     padding: 5px 0 5px 5px;
     margin-top: 0px;
     margin-right: 15px;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     cursor: pointer;
 }
 .m-authority ul li span{
@@ -120,10 +132,70 @@
     padding: 5px;
     margin-top: -5px;
     float: right;
-    border-left: 1px solid #fff;
+    border-left: 1px solid $white;
 }
 .m-authority ul li:hover em,
 .m-authority ul li.z-active em{
     background: url(../../build/img/project/icon-check.png) center center no-repeat;
     background-size: 60% 60%;
+}
+.m-pop{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    z-index: 2;
+    display: none;
+    padding: 0 0 20px;
+    background-color: $white;
+    @include borderRadius(6px);
+}
+.m-pop.m-addtype{
+    width: 400px;
+    margin-left: -200px;
+}
+.m-pop-title{
+    height: 30px;
+    padding: 10px;
+    line-height: 30px;
+    background-color: $lightGrey;
+    @include borderRadiusT(6px,6px);
+}
+.m-pop-title span{
+    font-size: 16px;
+    color: $darkGrey;
+}
+.m-pop-title em{
+    float: right;
+    display:inline-block; 
+    width:20px; 
+    height:4px; 
+    background: $red; 
+    font-size:0; 
+    line-height:0;
+    margin-top: 12px;
+    vertical-align:middle;
+    cursor: pointer;
+    -webkit-transform: rotate(45deg);
+}
+.m-pop-title em:after{
+     content:'.'; 
+     display:block; 
+     width:20px; 
+     height:4px; 
+     background: $red;
+     -webkit-transform: rotate(-90deg);
+}
+.m-pop-body{ text-align: center; } 
+.m-pop-body input{
+    display: block;
+    width: 60%;
+    padding: 5px;
+    margin: 20px auto;
+    border:  1px solid $grey;
+    @include borderRadius(6px);
+}
+.m-label-1{
+    display: inline-block;
+    height: 10px;
+    padding: 3px 5px;
 }

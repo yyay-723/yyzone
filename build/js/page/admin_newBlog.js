@@ -37,7 +37,7 @@ globalObj = $.extend(globalObj, {
 		var tag = $(".J_tag");
 		tag.click(function(){
 			tag_txt = $(this).text();
-			var tag_string = "<div class='m-label-1'>" + tag_txt +"</div>";
+			var tag_string = "<div class='m-label-1'>" + tag_txt +"<em></em></div>";
 			var tag_num = $(".m-label-1").length;
 			if(tag_num < 5){
 				$("#J_label_input").before(tag_string);
@@ -46,20 +46,40 @@ globalObj = $.extend(globalObj, {
 			}
 			
 		})
-		$("#J_label_input").keyup	(function(e){
-		    if(!e) var e = window.event; 
-		    if(e.keyCode==32){
-		        var input_txt = $(this).val();
-		        var tag_string = "<div class='m-label-1'>" + input_txt +"</div>";
+		//空格添加新标签
+		 $('#J_label_input').bind('input propertychange', function() {
+		   var input_txt = $(this).val();
+		   if(input_txt.indexOf(" ") >= 0){
+		        var tag_string = "<div class='m-label-1'>" + input_txt +"<em></em></div>";
 		    	var tag_num = $(".m-label-1").length;
-				if(tag_num < 5){
+		    	if(tag_num < 5){
 					$("#J_label_input").before(tag_string);
 					$(this).val("");
 				}else{
-					alert("标签数不能超过5个");
+					setTimeout(
+						function(){
+							alert("标签数不能超过5个")
+						},200);
 				}
 		    }
-		 });
+		})
+		//退格删除一个标签
+		$('#J_label_input').keydown(function(e){
+			var input_txt = $(this).val();
+			var tag_list = $(".m-label-1");
+			if((e.keyCode == 8)&&(input_txt.length == 0)){
+				if(tag_list.length > 0){
+					tag_list.eq(tag_list.length-1).remove();
+				}
+			}
+		})
+		//点击删除一个标签
+		$(".m-label-1 em").click(function(e){
+			alert("123");
+			$(this).parent(".m-label-1").remove();
+			e.stopPropagation();
+		})
+		
 	}
 	});
 	$(function(){

@@ -882,7 +882,7 @@ aside.m-admin-nav ul li.forth {
   margin-left: 5px;
   padding: 3px 5px;
   font-size: 12px;
-  color: #333;
+  color: #ccc;
   background-color: #007ca6;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -902,6 +902,21 @@ aside.m-admin-nav ul li.forth {
 
 .m-label-1 em:hover {
   background-position: left -12px;
+}
+
+.u-blog-title {
+  padding: 10px 0;
+  font-size: 24px;
+  color: #b1daff;
+}
+
+.u-blog-author {
+  padding: 10px 0;
+}
+
+.u-blog-time,
+.u-blog-author {
+  color: #fffeab;
 }
 
 /*# sourceMappingURL=style.css.map */

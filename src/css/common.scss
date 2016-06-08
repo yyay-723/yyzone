@@ -1,7 +1,7 @@
 ///////////////< reset >///////////////////
 body{ 
     font: 14px/150% '\5FAE\8F6F\96C5\9ED1', Verdana, Arial, Helvetica, sans-serif;
-    background:url(../../build/img/project/bg.png) repeat;
+    background:url(../img/project/bg.png) repeat;
     color: $white;
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,a,span,i,b{ margin:0; padding:0;}
@@ -150,7 +150,7 @@ aside.m-admin-nav ul li.forth{ background-color: $lightYellow; }
     width: 21px;
     height: 20px;
     @include mtl(5px,5px);
-    background: url(../../build/img/project/icon-search.png);
+    background: url(../img/project/icon-search.png);
 }
 .u-blog-edit{
     float: right;
@@ -191,6 +191,36 @@ aside.m-admin-nav ul li.forth{ background-color: $lightYellow; }
     height: 15px;
     margin-top: -3px;
     margin-left: 5px;
-    background: url(../../build/img/project/icon-lock.png);
+    background: url(../img/project/icon-lock.png);
+    background-size: 100% 100%;
     vertical-align: middle;
+}
+.m-page-nav{ 
+    padding: 60px 0 15px; 
+    text-align: center;
+}
+.m-page-nav ul li{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 2px;
+    color: $middleGrey;
+    background-color: $lightYellow;
+    border: 1px solid $yellow;
+    @include borderRadius(4px);
+}
+.m-page-nav ul li:hover{ 
+    background-color: $lightBlue;
+    border-color: $blue;
+}
+.m-page-nav ul li.ellipsis{
+    color: $white;
+    background-color: transparent;
+    border: none;
+}
+.m-page-nav ul li.ellipsis a{ cursor: text; } 
+.m-page-nav ul li a{
+    display: inline-block;
+    height: 30px;
+    padding: 0 15px;
 }
